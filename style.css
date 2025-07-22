@@ -1,0 +1,280 @@
+/* Google Fonts */
+body, button, input, textarea {
+  font-family: 'Roboto', Arial, sans-serif;
+}
+.blog-title, h1, h2, h3, h4 {
+  font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+}
+:root {
+  --primary: #7f5af0;
+  --secondary: #2cb67d;
+  --bg: #f6f8fc;
+  --text: #232946;
+  --nav-bg: #fff;
+  --nav-text: #232946;
+  --hero-bg: linear-gradient(90deg, #f6d365 0%, #fda085 100%);
+  --post-bg: #fff;
+  --post-shadow: 0 4px 24px rgba(127,90,240,0.08);
+  --footer-bg: #fff;
+  --footer-text: #888;
+  --accent: #7f5af0;
+}
+body.dark {
+  --primary: #7f5af0;
+  --secondary: #2cb67d;
+  --bg: #181a20;
+  --text: #f6f8fc;
+  --nav-bg: #232946;
+  --nav-text: #f6f8fc;
+  --hero-bg: linear-gradient(90deg, #232946 0%, #7f5af0 100%);
+  --post-bg: #232946;
+  --post-shadow: 0 4px 24px rgba(127,90,240,0.18);
+  --footer-bg: #232946;
+  --footer-text: #aaa;
+  --accent: #2cb67d;
+}
+html, body {
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  transition: background 0.4s, color 0.4s;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+.navbar {
+  background: var(--nav-bg);
+  color: var(--nav-text);
+  box-shadow: 0 2px 12px rgba(127,90,240,0.07);
+  padding: 0.7rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.blog-title {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+#mode-toggle {
+  background: var(--nav-bg);
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--accent);
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s, color 0.3s, border 0.3s;
+}
+#mode-toggle:focus {
+  outline: 2px solid var(--secondary);
+}
+.hero {
+  background: var(--hero-bg);
+  color: #232946;
+  padding: 3.5rem 0 2.5rem 0;
+  text-align: center;
+  border-radius: 0 0 2rem 2rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 6px 32px rgba(127,90,240,0.10);
+}
+body.dark .hero {
+  color: #f6f8fc;
+}
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.hero-content p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  opacity: 0.95;
+}
+.post {
+  background: var(--post-bg);
+  box-shadow: var(--post-shadow);
+  border-radius: 1.2rem;
+  margin-bottom: 2.5rem;
+  padding: 2.2rem 2rem 1.5rem 2rem;
+  transition: background 0.4s, box-shadow 0.4s;
+  position: relative;
+  overflow: hidden;
+}
+.post-header {
+  margin-bottom: 1.1rem;
+}
+.post-title {
+  font-size: 1.5rem;
+  color: var(--accent);
+  font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+.post-meta {
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+body.dark .post-meta {
+  color: #bbb;
+}
+.post-content {
+  font-size: 1.13rem;
+  line-height: 1.8;
+  color: var(--text);
+}
+.footer {
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  text-align: center;
+  padding: 2rem 0 1.2rem 0;
+  font-size: 1.05rem;
+  margin-top: 3rem;
+  border-radius: 2rem 2rem 0 0;
+  box-shadow: 0 -2px 12px rgba(127,90,240,0.07);
+}
+
+.post-form-section {
+  background: var(--post-bg);
+  box-shadow: var(--post-shadow);
+  border-radius: 1.2rem;
+  margin-bottom: 2.5rem;
+  padding: 2rem 2rem 1.5rem 2rem;
+  transition: background 0.4s, box-shadow 0.4s;
+}
+.post-form h2 {
+  font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+  font-size: 1.3rem;
+  color: var(--accent);
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+}
+.form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+.post-form input[type="text"],
+.post-form input[type="date"],
+.post-form textarea {
+  font-size: 1rem;
+  padding: 0.7rem 1rem;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 0.7rem;
+  background: var(--bg);
+  color: var(--text);
+  outline: none;
+  transition: border 0.2s, background 0.3s;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+.post-form input[type="text"],
+.post-form input[type="date"] {
+  flex: 1 1 0;
+  min-width: 120px;
+}
+.post-form textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+.post-form input:focus,
+.post-form textarea:focus {
+  border: 1.5px solid var(--accent);
+  background: #f3f3fa;
+}
+body.dark .post-form input,
+body.dark .post-form textarea {
+  background: #232946;
+  color: #f6f8fc;
+  border: 1.5px solid #33364d;
+}
+body.dark .post-form input:focus,
+body.dark .post-form textarea:focus {
+  background: #181a20;
+  border: 1.5px solid var(--accent);
+}
+.submit-btn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 0.7rem;
+  padding: 0.7rem 2.2rem;
+  font-size: 1.1rem;
+  font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  box-shadow: 0 2px 8px rgba(127,90,240,0.08);
+  transition: background 0.2s, color 0.2s;
+}
+.submit-btn:hover, .submit-btn:focus {
+  background: var(--secondary);
+  color: #232946;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  font-size: 1.2rem;
+  cursor: pointer;
+  float: right;
+  margin-left: auto;
+  margin-right: -0.3rem;
+  margin-top: -0.2rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+  transition: background 0.2s, color 0.2s;
+}
+.delete-btn:hover, .delete-btn:focus {
+  background: #ffeaea;
+  color: #c0392b;
+  outline: none;
+}
+body.dark .delete-btn:hover, body.dark .delete-btn:focus {
+  background: #3a2323;
+  color: #ff7675;
+}
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  position: relative;
+}
+.post-title {
+  flex: 1 1 auto;
+}
+
+@media (max-width: 700px) {
+  .container {
+    max-width: 100%;
+    padding: 0 0.7rem;
+  }
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+  .post {
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+  }
+  .blog-title {
+    font-size: 1.2rem;
+  }
+} 

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Beautiful Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <span class="blog-title">My Beautiful Blog</span>
+            <button id="mode-toggle" aria-label="Toggle light/dark mode">🌙</button>
+        </div>
+    </nav>
+    <header class="hero">
+        <div class="container hero-content">
+            <h1>Welcome to My Beautiful Blog</h1>
+            <p>Thoughts, tutorials, and stories with a touch of elegance.</p>
+        </div>
+    </header>
+    <main class="container">
+        <section class="post-form-section">
+            <form id="post-form" class="post-form">
+                <h2>Write a New Blog Post</h2>
+                <div class="form-row">
+                    <input type="text" id="post-title" name="title" placeholder="Title" required>
+                    <input type="text" id="post-author" name="author" placeholder="Author" required>
+                    <input type="date" id="post-date" name="date" required>
+                </div>
+                <textarea id="post-content" name="content" placeholder="Write your blog content here..." rows="5" required></textarea>
+                <button type="submit" class="submit-btn">Post</button>
+            </form>
+        </section>
+        <div id="posts-list">
+        <article class="post">
+            <div class="post-header">
+                <h2 class="post-title">✨ The Art of Simplicity</h2>
+                <div class="post-meta">April 27, 2024 &middot; by Jane Doe</div>
+                <button class="delete-btn" title="Delete post">🗑️</button>
+            </div>
+            <div class="post-content">
+                <p>Discover how simplicity in design and life can lead to greater happiness and productivity. Embrace minimalism and let go of the unnecessary clutter!</p>
+            </div>
+        </article>
+        <article class="post">
+            <div class="post-header">
+                <h2 class="post-title">🌱 Growing with Every Post</h2>
+                <div class="post-meta">April 25, 2024 &middot; by Jane Doe</div>
+                <button class="delete-btn" title="Delete post">🗑️</button>
+            </div>
+            <div class="post-content">
+                <p>Blogging is a journey of growth. Every post is a step forward, a new lesson learned, and a new connection made. Start your journey today!</p>
+            </div>
+        </article>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <span>&copy; 2024 My Beautiful Blog. Made with ❤️</span>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html> 
